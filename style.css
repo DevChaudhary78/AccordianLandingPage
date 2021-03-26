@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --text-blue: hsl(238, 29%, 16%);
+    --text-dkblue: hsl(240, 6%, 50%);
+    --text-xdkblue: hsl(237, 12%, 33%);
+    --text-red: hsl(14, 88%, 65%);
+    --gradient-violet: hsl(273, 75%, 66%);
+    --gradient-blue: hsl(240, 73%, 65%);
+    --divider-blue: hsl(240, 5%, 91%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, var(--gradient-violet), var(--gradient-blue)) no-repeat;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.card{
+    background: white;
+    border-radius: 30px;
+    height: 509px;
+    width: 920px;
+
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-gap: 6rem;
+
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 1260% 65%;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.question img{
+    align-self: center;
+}
+
+.answer{
+    display: none;
+}
+
+.active > .answer {
+    display: block;
+    padding-bottom: 1.3rem;
+    color: var(--darkGrayBlue);
+}
+
+.active h3{
+    font-weight: 700;
+}
+
+.image_wrapper_inner{
+    background: url(./images/illustration-woman-online-desktop.svg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 120% center;
+}
+
+.card__image{
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    top: 42%;
+    left: -25%;
+}
+
+.question > h3{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-xdkblue);
+    margin: 1.4rem 0rem;
+}
+
+.QnA-Div{
+    width: 350px;
+    border-bottom: 1px solid #e8e8ea;
+}
+
+.card__title{
+    font-size: 3rem;
+    margin-top: rem;
+}
+
+.active img {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in;
+}
+
+/* .card__text {
+    margin-top: 65px;
+  
+    display: flex;
+    flex-direction: column;
+} */
+
+/*credits*/
+
+.credits{
+    color: white;
+    font-size: 1rem;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+}
+
+span{
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+span > a{
+    text-decoration: none;
+}
